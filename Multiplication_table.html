@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Miltiplication table</title>
+    </head>
+    <body>
+        <script>
+            for (i=2 ; i < 10 ; ++i){
+                for(j=1; j<10; ++j){
+                    c = j * i
+                    document.write('<table border="1" width="110px">' + '<tr>' + '<td>' + j + '</td>' + '<td>' + '*' + '</td>' + '<td>' + i + '</td>' + '<td>' + '=' + '</td>' + '<td>' + c + '</td>' +'</tr>' + '</table>' )
+                }
+            document.write('<br>')
+            }
+        </script>
+    </body>
+</html>

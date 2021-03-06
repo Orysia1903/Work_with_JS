@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Піднесення до степення без використання методу Math.pow()
+        function mathPow (a, b){
+            var result = a;
+            for(i=1; i<b; i++){
+            result *= a;
+        }
+        return result;
+    }
+        var a = +prompt('a')
+        var b = +prompt('b(pow)');
+        var resultMathPow = mathPow(a,b)
+        if (b>0){
+            document.write(resultMathPow)
+        } else if(b == 0){
+            document.write('1')
+        } else {
+            document.write('error, enter a value greater than 0')
+        }
+    </script>
+</body>
+</html>

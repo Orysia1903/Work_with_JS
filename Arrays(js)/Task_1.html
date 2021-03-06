@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array methods (examples)</title>
+</head>
+<body>
+    <script>
+    //  1. Сделать собственные примеры методов применяемых для массивов.
+    function join(){
+        var date = ['12', '01', '2021']
+        var newDate = date.join('. ')
+        console.log (newDate)
+    }
+    function split(){
+        var number = 'apple-appricote-orange'
+        var newNumber = number.split('-');
+        console.log(newNumber)
+    }
+    function concat(){
+        var seasons = ['autumn', 'winter', 'spring'];
+        var allSeasons = seasons.concat('summer');
+        console.log(allSeasons)
+    }
+    function reverse(){
+        var daysOfWeeks = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+        var reverseDays = daysOfWeeks.reverse();
+        console.log(reverseDays)
+    }
+    function slice(){
+        var winter = ['December', 'January', 'February'];
+        var spring = ['March', 'April', 'May'];
+        var autumn = ['September', 'October', 'November'];
+        var summer = ['June', 'July', 'August'];
+        var months = [winter, spring, autumn, summer];
+        var withoutSpring = months.slice(2, 4);
+        console.log(winter + ', ' + withoutSpring)
+    }
+    function splice(){
+        var fruits = ['apple', 'lemon', 'strawberry', 'potato', 'onion', 'cucumber', 'orange'];
+        fruits.splice(3, 3, "mango", "banana", "blueberries");
+        console.log(fruits)
+        
+    }
+    function sort(){
+        var names = ['Andrij', 'Ivan', 'Petro', 'Oleksandr', 'Roman'];
+        var sortNames = names.sort();
+        console.log(sortNames)
+    }
+    function sortNumbers(){
+        var x = [1, 6, 87, 34, 4, 0. -4, 45, 500, 3];
+        var xSort = x.sort(function(a,b){return(a-b)});
+        console.log(xSort);
+    }
+    function push(){
+        var coments = ['Hello', 'Hi', 'Good morning'];
+        coments.push('Good night');
+        console.log(coments)
+    }
+    function pop(){
+        var colors = ['red', 'green', 'yellow', 'black', 'white'];
+        var popColors = colors.pop();
+        console.log('Color which was deleted: ' + popColors);
+        console.log('Remaining colors ' + colors)
+    }
+    function unshift(){
+        var winterMonths = ['January', 'February'];
+        winterMonths.unshift('December');
+        console.log(winterMonths)
+    }
+    function shift(){
+        var springMonths = ['December', 'March', 'April', 'May'];
+        var wrongMonths = springMonths.shift();
+        console.log('Spring months are: ' + springMonths);
+        console.log('Month which is not spring:  ' + wrongMonths)
+    }
+
+    join();
+    console.log('-----------')
+    split()
+    console.log('-----------')
+    concat()
+    console.log('-----------')
+    reverse()
+    console.log('-----------')
+    slice()
+    console.log('-----------')
+    splice()
+    console.log('-----------')
+    sort()
+    console.log('-----------')
+    sortNumbers()
+    console.log('-----------')
+    push()
+    console.log('-----------')
+    pop()
+    console.log('-----------')
+    unshift()
+    console.log('-----------')
+    shift()
+    </script>
+</body>
+</html>

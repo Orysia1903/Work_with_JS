@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays in array</title>
+</head>
+<body>
+    <script>
+        function makeArray (k){
+            var matrix = new Array(k)
+            for (var i=0; i<matrix.length; i++){
+                if(i%2 == 0){
+                    var firstArrayInArray = ['odd', 'odd', 'odd'];
+                    document.write(firstArrayInArray + '<br>')
+                } else {
+                    var secondArrayInArray = ['even', 'even', 'even'];
+                    document.write(secondArrayInArray + '<br>')
+                }
+            }
+        }
+        var numberOfArrays = +prompt('Enter number of Arrays, please', 12)
+        makeArray(numberOfArrays)
+    </script>
+</body>
+</html>

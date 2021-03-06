@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.i">
+    <title>Info about persons in Company</title>
+</head>
+<body>
+    <script>
+    //      2. Создать массив, который будет хранить в себе информацию о сотрудниках предприятия. Каждый элемент масива — объект, содержащий свойства: name, sName, age, occupation, и метод show, который выводит всю информацию о сотруднике.
+    // Реализовать заполнение массива пользователем.
+    //    {
+    //      name: 'Yegor', 
+    //      sName: 'M', 
+    //      age: 18, 
+    //      occupation: 'developer',
+    //      show: function(){}
+    //    },
+    //    Создать еще одну функцию которая Посортирует работников по алфавиту по их именам
+    function infoAboutPersons(){
+        var numberOfPeople = +prompt('Enter number of peoples who work in this company')
+        var persons = new Array(numberOfPeople);
+        for (var i = 0; i < persons.length; i++){
+            persons[i] = new Object();
+            persons[i].name = prompt('Name');
+            persons[i].sName = prompt('sName');
+            persons[i].age = +prompt('age');
+            persons[i].occupation = prompt('occupation');
+            persons[i].show = function(){console.log('Person: ' + (i+1) + '\n'+ 'Name: ' + persons[i].name +'\n Surname: +  ' + persons[i].sName + '/n Age: ' + persons[i].age+ '/n Occupation: ' + persons[i].occupation + '/n')};
+            persons[i].show();
+        }
+        persons.sort(function(a,b){if(a.name<b.name){return -1}else {return 1}});
+        console.log(persons)
+    }
+    infoAboutPersons()
+    </script>
+</body>
+</html>

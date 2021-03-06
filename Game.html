@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+</head>
+<body>
+    <script>
+        function generateRandom(){  
+        var i = ''
+        var computerChoice = Math.random();
+        if (computerChoice<0.33){
+            i ='rock'
+        } else if (computerChoice>=0.33 && computerChoice<0.66){
+            i ='scissors'
+        } else {
+            i ='paper'
+        }
+        return i;
+    }
+
+     var randomValue = generateRandom()
+     //alert(randomValue)
+     var userValue = prompt('Enter: rock scissors or paper')
+     if ((userValue === 'rock' && randomValue ==='scissors')||(userValue === 'scissors' && randomValue ==='paper')
+     ||(userValue === 'paper' && randomValue ==='rock' )){
+         document.write('You win')
+     } else if ((userValue === 'rock' && randomValue ==='paper')||(userValue === 'scissors' && randomValue ==='rock')
+     ||(userValue === 'paper' && randomValue ==='scissors')){
+         document.write('Game over')
+     } else if(userValue === randomValue){
+        document.write('the same values')
+     } else {
+         document.write('incorrect value')
+     }
+    </script>
+</body>
+</html>

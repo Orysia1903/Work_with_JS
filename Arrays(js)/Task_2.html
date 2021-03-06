@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min and Max</title>
+</head>
+<body>
+    <script>
+    // Создать функцию для нахождения минимального и максимального элемента массива getMinAndMax(array).
+    //  Результат должен выводиться в консоль.
+    var getMinAndMax = [4, 7, 14, 5, 9, 655, 5,56, 7888, 1, -5];
+    var min = getMinAndMax[0];
+    var max = getMinAndMax[getMinAndMax.length -1]
+    getMinAndMax.sort(function (a, b) { return a - b; });
+    console.log('Min: ' + min + '  ' + 'Max: ' + max);
+        
+    </script>
+</body>
+</html>

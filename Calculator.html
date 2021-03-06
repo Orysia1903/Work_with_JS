@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <script>
+        var operand1 = +prompt('Enter first operand')
+        var sign = prompt('Enter sign')
+        var operand2 = +prompt('Enter second operand')
+        var result
+
+        function calculate(operand1, operand2, sign){
+            switch(sign){
+                case '+':
+                    result = operand1 + operand2;
+                    break;
+                case '-':
+                    result = operand1 - operand2;
+                    break;
+                case '/':
+                    result = operand1/operand2;
+                    break;
+                case '*':
+                    result = operand1 * operand2;
+                    break;
+               
+            }
+            return result;
+        }
+        if (operand1 != +operand1 || operand2 != +operand2){
+            document.write('<p>' + '<b>' + 'Одне з введених даних не є числом' + '</b>' +'<p>')
+        } 
+        if (result != undefined) {
+        document.write( 'result = ' + calculate(operand1, operand2, sign))
+        } else {
+             document.write("<i style='color:blue'>" + sign + "</i>" + '<b style="color:red">' + ' - ' + 'не є математичним оператором' + '</b>')
+         }
+        
+    </script>
+</body>
+</html>

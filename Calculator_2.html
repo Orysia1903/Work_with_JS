@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <script>
+    // 1. Создать объект Calculator, который должен содержать методы для расчета суммы, разницы, произведения и деления двух чисел.
+    //    Протестировать данный объект, принимая от пользователя значения двух операндов и знак операции.
+    //   В зависимости от принятого знака операции, вызвать соответствующий метод.
+    function toCount(){  
+    var firstOperand = +prompt('Enter first number');
+    var operator = prompt('Enter operator');
+    var secondOperand = +prompt('Enter second number');
+    var calculator = {
+        addition: function(a, b){var c = a+b; return c},
+        subtraction: function(a, b){var c = a-b; return c},
+        multiplication: function(a, b){var c = a*b; return c},
+        division: function(a, b){var c = a/b; return c},
+    }
+    
+    switch(operator){
+        case '+': console.log(firstOperand + ' + ' + secondOperand + ' = ' + calculator.addition(firstOperand, secondOperand));
+        break;
+        case '-': console.log(firstOperand + ' - ' + secondOperand + ' = ' + calculator.subtraction(firstOperand, secondOperand));
+        break;
+        case '*': console.log(firstOperand + ' * ' + secondOperand + ' = ' + calculator.multiplication(firstOperand, secondOperand));
+        break;
+        case '/': console.log(firstOperand + ' / ' + secondOperand + ' = ' + calculator.division(firstOperand, secondOperand));
+        break;
+        default: console.log('Value is not operator')
+    }
+}
+toCount()
+    </script>
+</body>
+</html>
